@@ -888,7 +888,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
   // ب) لوحة التحكم بالإدارة
   if (commandName === "control-panel") {
     // التحقق من صلاحيات الآدمن
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1036,7 +1036,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // د) أمر تحديد قناة اللوج (/set-log-channel)
   if (commandName === "set-log-channel") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1081,7 +1081,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // هـ) أمر تحديد الحد الأدنى للمشاهدات (/set-min-views)
   if (commandName === "set-min-views") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1106,7 +1106,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // و) أمر إضافة زر مخصص (/add-button)
   if (commandName === "add-button") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1144,7 +1144,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // ز) أمر حذف زر مخصص (/delete-button)
   if (commandName === "delete-button") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1160,7 +1160,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // ح) أمر قائمة الأزرار المخصصة (/list-buttons)
   if (commandName === "list-buttons") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1196,7 +1196,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // ط) أمر عرض المخزون (/عرض-المخزون)
   if (commandName === "عرض-المخزون") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1252,7 +1252,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // ي) أمر إزالة حساب من المخزون (/ازالة-مخزون)
   if (commandName === "ازالة-مخزون") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1282,7 +1282,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // ك) أمر حذف المخزون كامل (/حذف-مخزون-كامل)
   if (commandName === "حذف-مخزون-كامل") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1327,7 +1327,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // 12. أمر إضافة حسابات للمخزون
   if (commandName === "add-accounts") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1374,7 +1374,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // 13. أمر إنشاء لوحة مقاطع TikTok
   if (commandName === "create-panel") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1442,7 +1442,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // 14. أمر حذف لوحة
   if (commandName === "delete-panel") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1462,7 +1462,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // 15. أمر عرض اللوحات
   if (commandName === "list-panels") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1493,7 +1493,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // 15.5 أمر تحديد مهلة اللوحة (/set-deadline)
   if (commandName === "set-deadline") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1527,7 +1527,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
   if (commandName === "check-dm") {
     const targetUser = interaction.options.getUser("user") || interaction.user;
 
-    if (targetUser.id !== interaction.user.id && !interaction.member.permissions.has("Administrator")) {
+    if (targetUser.id !== interaction.user.id && !interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: لا يمكنك فحص حسابات عضو آخر.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1590,7 +1590,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
   // 19. أمر تحديد رتبة مسموح لها بإرسال الحسابات
   if (commandName === "allowed-to-send-accs") {
-    if (!interaction.member.permissions.has("Administrator")) {
+    if (!interaction.member?.permissions.has("Administrator")) {
       return interaction.reply({ content: "خطأ: هذا الأمر مخصص لمدراء النظام فقط.", flags: MessageFlags.Ephemeral });
     }
 
@@ -1618,6 +1618,11 @@ client.on(Events.InteractionCreate, async (interaction) => {
  *  (6) وظيفة إرسال الجائزة للعضو وتصحيح الرسالة الإملائية
  * ==========================================================================*/
 async function sendPrizeToUser(user, prizeData, source = "dm", guildId = null) {
+  if (!user) {
+    console.warn("[WARN] Cannot send prize: user is null");
+    return false;
+  }
+
   const prizeDisplay = Array.isArray(prizeData) ? prizeData.join("\n") : prizeData;
 
   if (await isBanned(user.id)) {
@@ -1632,7 +1637,11 @@ async function sendPrizeToUser(user, prizeData, source = "dm", guildId = null) {
     `\`\`\`\n${prizeDisplay}\n\`\`\``;
 
   try {
-    const dm = await user.createDM();
+    const dm = await user.createDM().catch(() => null);
+    if (!dm) {
+      console.warn(`[WARN] Failed to create DM for ${user.tag || user.id}`);
+      return false;
+    }
     await dm.send({ content: messageContent });
     await saveSentAccount(user.id, user.tag || user.username, prizeDisplay, source, guildId);
     return true;
@@ -1650,8 +1659,10 @@ function isSubmissionExpired(submission) {
 
 // إرسال رسالة "وقتك خلص" للعضو
 async function notifyDeadlineExpired(user) {
+  if (!user) return;
   try {
-    const dm = await user.createDM();
+    const dm = await user.createDM().catch(() => null);
+    if (!dm) return;
     await dm.send({ content: "وقتك خلص" });
   } catch {
     // تجاهل خطأ الخاص المغلق
@@ -1715,7 +1726,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
         return interaction.reply({ content: "خطأ: الطلب غير موجود أو تمت معالجته مسبقاً.", flags: MessageFlags.Ephemeral });
       }
 
-      if (!interaction.member.permissions.has("Administrator")) {
+      if (!interaction.member?.permissions.has("Administrator")) {
         return interaction.reply({ content: "خطأ: لا تملك صلاحية القبول.", flags: MessageFlags.Ephemeral });
       }
 
@@ -1772,7 +1783,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
         return interaction.reply({ content: "خطأ: الطلب غير موجود أو تمت معالجته مسبقاً.", flags: MessageFlags.Ephemeral });
       }
 
-      if (!interaction.member.permissions.has("Administrator")) {
+      if (!interaction.member?.permissions.has("Administrator")) {
         return interaction.reply({ content: "خطأ: لا تملك صلاحية القبول.", flags: MessageFlags.Ephemeral });
       }
 
@@ -1823,7 +1834,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
         return interaction.reply({ content: "خطأ: الطلب غير موجود أو تمت معالجته مسبقاً.", flags: MessageFlags.Ephemeral });
       }
 
-      if (!interaction.member.permissions.has("Administrator")) {
+      if (!interaction.member?.permissions.has("Administrator")) {
         return interaction.reply({ content: "خطأ: لا تملك صلاحية الرفض.", flags: MessageFlags.Ephemeral });
       }
 
@@ -1890,7 +1901,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
     // أ) زر إضافة حسابات للمخزون
     if (customId === "btn_add_stock") {
-      if (!interaction.member.permissions.has("Administrator")) {
+      if (!interaction.member?.permissions.has("Administrator")) {
         return interaction.reply({ content: "خطأ: لا تملك صلاحية تعديل المخزون.", flags: MessageFlags.Ephemeral });
       }
 
@@ -1928,7 +1939,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
     // ب) زر إرسال جائزة (يفتح قائمة منسدلة لاختيار العضو)
     if (customId === "btn_send_prize") {
-      if (!interaction.member.permissions.has("Administrator")) {
+      if (!interaction.member?.permissions.has("Administrator")) {
         return interaction.reply({ content: "خطأ: هذا الزر مخصص للأدمن فقط.", flags: MessageFlags.Ephemeral });
       }
 
@@ -2025,7 +2036,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
 
     // و) تأكيد حذف المخزون كامل
     if (customId.startsWith("confirm_clear_stock_")) {
-      if (!interaction.member.permissions.has("Administrator")) {
+      if (!interaction.member?.permissions.has("Administrator")) {
         return interaction.reply({ content: "خطأ: لا تملك صلاحية حذف المخزون.", flags: MessageFlags.Ephemeral });
       }
 
@@ -2336,7 +2347,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
       if (flow.source === "deliver") {
         permission = await canSendAccounts(interaction.member, 1, guildId);
       } else {
-        permission = { allowed: interaction.member.permissions.has("Administrator"), isAdmin: true, reason: "هذا الإرسال مخصص للأدمن فقط." };
+        permission = { allowed: interaction.member?.permissions.has("Administrator"), isAdmin: true, reason: "هذا الإرسال مخصص للأدمن فقط." };
       }
       if (!permission.allowed) {
         activeDeliveries.delete(interactionId);
@@ -2391,7 +2402,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
         return interaction.reply({ content: "خطأ: الرجاء إدخال رقم صحيح أكبر من صفر.", flags: MessageFlags.Ephemeral });
       }
 
-      if (!interaction.member.permissions.has("Administrator")) {
+      if (!interaction.member?.permissions.has("Administrator")) {
         activeDeliveries.delete(interactionId);
         return interaction.reply({ content: "خطأ: هذا الإرسال مخصص للأدمن فقط.", flags: MessageFlags.Ephemeral });
       }
@@ -2567,7 +2578,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
         return interaction.reply({ content: "خطأ: أدخل رقم صحيح أكبر من صفر.", flags: MessageFlags.Ephemeral });
       }
 
-      if (!interaction.member.permissions.has("Administrator")) {
+      if (!interaction.member?.permissions.has("Administrator")) {
         activeDeliveries.delete(deliveryId);
         return interaction.reply({ content: "خطأ: هذا الإرسال مخصص للأدمن فقط.", flags: MessageFlags.Ephemeral });
       }
@@ -2662,7 +2673,7 @@ client.on(Events.InteractionCreate, async (interaction) => {
         return await interaction.editReply({ content: "خطأ: تعذر العثور على العضو." });
       }
 
-      if (!interaction.member.permissions.has("Administrator")) {
+      if (!interaction.member?.permissions.has("Administrator")) {
         activeDeliveries.delete(deliveryId);
         return await interaction.editReply({ content: "خطأ: هذا الإرسال مخصص للأدمن فقط." });
       }
