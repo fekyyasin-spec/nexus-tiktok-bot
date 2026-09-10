@@ -1,0 +1,22 @@
+{
+  "name": "tiktok-stats-scraper",
+  "version": "1.0.0",
+  "description": "استخراج عدد المشاهدات واللايكات والتعليقات والمشاركات من رابط فيديو TikTok (بدون API الرسمية)",
+  "main": "src/tiktokStats.js",
+  "type": "commonjs",
+  "scripts": {
+    "stats": "node src/cli.js",
+    "bot": "node bot.js"
+  },
+  "keywords": [
+    "tiktok",
+    "scraper",
+    "discord"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "discord.js": "^14.27.0",
+    "dotenv": "^16.4.5",
+    "mongoose": "^9.9.3"
+  }
+}

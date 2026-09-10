@@ -1,0 +1,16 @@
+{
+  "stock": [],
+  "logs": [],
+  "config": {
+    "minViews": 1000,
+    "logChannelId": null,
+    "allowedToSendRoleId": null,
+    "allowedToSendDailyLimit": 0
+  },
+  "buttons": [],
+  "embeds": [],
+  "panels": [],
+  "submissions": [],
+  "sendAccUsage": {},
+  "guilds": {}
+}
